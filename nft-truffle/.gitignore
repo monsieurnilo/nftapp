@@ -5,9 +5,6 @@ yarn-error.log
 package-lock.json
 yarn.lock
 
-# Truffle build artifacts
-build/
-
 # Environment variables
 .env
 
