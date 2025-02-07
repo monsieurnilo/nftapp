@@ -66,9 +66,9 @@ const WalletConnector: React.FC<WalletConnectorProps> = ({ onAccountChange }) =>
     return (
         <>
             {account ? (
-                <p>Connected account: {account}</p>
+                <p>Compte connecté: {account}</p>
             ) : (
-                <button onClick={connectWallet}>Connect Wallet</button>
+                <button onClick={connectWallet}>Connecter via MetaMask</button>
             )}
         </>
     );
