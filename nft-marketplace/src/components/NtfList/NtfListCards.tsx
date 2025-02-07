@@ -5,7 +5,6 @@ interface Nft {
     proprietaire: string;
     prix: number;
     auteur: string;
-    date: string;
 }
 
 function NftListCard({ nft }: { nft: Nft }) {
@@ -25,7 +24,7 @@ function NftListCard({ nft }: { nft: Nft }) {
                 </p>
                 <footer className="flex space-between align-center">
                     <mark>{nft.prix}</mark>
-                    <button className="default">Acheter</button>
+                    <button className="default">Voir</button>
                 </footer>
             </article>
         </>
