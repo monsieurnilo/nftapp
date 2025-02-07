@@ -49,4 +49,4 @@ async function mintNFT(imagePath, collection) {
 }
 
 // Replace "image.png" with your actual image file in the same directory
-mintNFT("image.png", "MyCollection");
+mintNFT("testNFT.png", "MyCollection");
