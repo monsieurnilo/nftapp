@@ -103,20 +103,10 @@ https://ipfs.io/ipfs/bafybei...  # Replace with the actual CID
 ```
 OR fetch via JavaScript:
 ```javascript
-const metadata = await fetch("https://ipfs.io/ipfs/bafybei...").then(res => res.json());
-console.log(metadata);
-```
-✅ **Expected Output:**
-```json
-{
-  "name": "My First NFT",
-  "description": "This is my first NFT stored on IPFS.",
-  "image": "ipfs://bafybeib2aabc123.../image.png",
-  "attributes": [
-    { "trait_type": "Rarity", "value": "Unique" },
-    { "trait_type": "Power", "value": 100 }
-  ]
-}
+const ipfsHash = "QmWsmNDoWdUN4ikY8hqJqpWNDyBwj8z9dBz5hV7PfgBcNY";
+const response = await fetch(`https://gateway.pinata.cloud/ipfs/${ipfsHash}`);
+console.log("Content-Type:", response.headers.get("content-type"));
+
 ```
 
 ### **5️⃣ Get the Collection of an NFT**
