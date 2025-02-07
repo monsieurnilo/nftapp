@@ -1,7 +1,7 @@
 {
   "name": "nft-truffle",
   "version": "1.0.0",
-  "description": "",
+  "description": "--------------------------\r > transaction hash:    0x218b299a4c277a39ca6613ba002b9ddc1307e014e76e8ba23e5d0e5eb50c6cea\r > Blocks: 1            Seconds: 16\r > contract address:    0x536FAEb44E5E287375602212B0022Eb661a41cdd\r > block number:        3304187\r > block timestamp:     1738933824\r > account:             0xF364321D09Fd8556A9fE7D66869B081e6D3feB4F\r > balance:             0.869779045\r > gas used:            2893799 (0x2c27e7)\r > gas price:           45 gwei\r > value sent:          0 ETH\r > total cost:          0.130220955 ETH",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^5.2.0",
+    "@pinata/sdk": "^1.1.25",
     "@truffle/hdwallet-provider": "^2.1.15",
     "dotenv": "^16.4.7"
+  },
+  "directories": {
+    "test": "test"
   }
 }
