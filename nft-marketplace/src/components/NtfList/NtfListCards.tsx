@@ -5,10 +5,9 @@ interface Nft {
     proprietaire: string;
     prix: number;
     auteur: string;
-    date: string;
 }
 
-function NftCard({ nft }: { nft: Nft }) {
+function NftListCard({ nft }: { nft: Nft }) {
     return (
         <>
             <article className="flex column p-1" style={{ flex: '1 1 calc(33.333% - 1rem)' }}>
@@ -25,11 +24,11 @@ function NftCard({ nft }: { nft: Nft }) {
                 </p>
                 <footer className="flex space-between align-center">
                     <mark>{nft.prix}</mark>
-                    <button className="default">Button</button>
+                    <button className="default">Voir</button>
                 </footer>
             </article>
         </>
     );
 }
 
-export default NftCard;
+export default NftListCard;
