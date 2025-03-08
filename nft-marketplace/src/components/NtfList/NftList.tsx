@@ -4,7 +4,7 @@ import NFTMarketplace from '../../../../nft-truffle/build/contracts/NFTMarketpla
 import web3 from '../../../web3';
 
 interface Nft {
-    tokenId: any;
+    tokenId: string;
     tokenURI: string;
     collection: string;
 }
@@ -25,10 +25,13 @@ function NftList() {
                 );
 
                 const nfts = await contract.methods.getAllNFTs().call() || [];
+                console.log('NFTs:', nfts); // Log des NFTs récupérés
+
                 const nftDetails = await Promise.all(nfts.map(async (tokenId: any) => {
                     const tokenURI = await contract.methods.tokenURI(tokenId).call() as string;
                     const collection = await contract.methods.getCollection(tokenId).call() as string;
-                    return { tokenId, tokenURI, collection };
+                    console.log('NFT Details:', { tokenId: tokenId.toString(), tokenURI, collection }); // Log des détails des NFTs
+                    return { tokenId: tokenId.toString(), tokenURI, collection };
                 }));
                 setNfts(nftDetails);
             } catch (err) {
